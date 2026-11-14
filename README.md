@@ -5,66 +5,92 @@
 <h1 align="center">Antigravity Sci Fast IO</h1>
 
 <p align="center">
+  <b>English</b> | <a href="./README_zh.md">简体中文</a>
+</p>
+
+<p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"></a>
   <img src="https://img.shields.io/badge/Antigravity-2.0%20%7C%20IDE%20%7C%20CLI-0284C7" alt="Antigravity 2.0 | IDE | CLI">
+  <a href="https://www.agensi.io/r/CHEATSAZUKI?to=/creators/cheat-s-azuki"><img src="https://img.shields.io/badge/Pro%20Suite%20on%20Agensi-Claude%20Code%20%7C%20Cursor%20%7C%20Copilot%20%7C%20Windsurf-7C3AED" alt="Cross-Agent Pro Suite on Agensi.io"></a>
   <img src="https://img.shields.io/badge/Python-3.9%2B%20(Stdlib%20Only)-16A34A" alt="Python 3.9+ Stdlib Only">
   <img src="https://img.shields.io/badge/Co--Built%20with-Gemini-4285F4?logo=googlegemini&logoColor=white" alt="Co-Built with Gemini">
   <img src="https://img.shields.io/badge/Version-2.0.0-F59E0B" alt="Version 2.0.0">
 </p>
 
-**Antigravity Sci Fast IO**（插件 ID：`sci-fast-io`）是专为 **科研计算、生信/化学信息学数据分析、深度学习实验与 LaTeX 学术写作** 打造的 **Google Antigravity** 本地加速与防爆护栏插件（受 [`oil-oil/agy-fast-io`](https://github.com/oil-oil/agy-fast-io) 启发并针对科研场景深度重构）。
+**Antigravity Sci Fast IO** (`sci-fast-io`) is a local velocity and context-protection plugin built for **scientific computing, bioinformatics/cheminformatics, deep learning experiments, and LaTeX academic writing** in **Google Antigravity** (inspired by [`oil-oil/agy-fast-io`](https://github.com/oil-oil/agy-fast-io) and re-architected for scientific workflows).
 
-它在一个轻量插件包里同时解决科研 Agent 最让人头疼的两件事：**「每步思考等太久」** 与 **「误读大文件瞬间把上下文搞崩」**。
+It solves the two biggest bottlenecks of autonomous research agents in one lightweight package: **waiting too long between fragmented tool turns** and **blowing up context windows by accidentally reading multi-megabyte datasets or base64-heavy notebooks**.
+
+> **Using Claude Code, Cursor, GitHub Copilot, Windsurf, or Codex—or need Remote GPU SHA-256 sync gates, frozen paper baselines & LaTeX/PPTX QA?** Jump to [**Community MIT vs. Sci-Fast-IO Pro (Cross-Agent Suite)**](#community-mit-vs-sci-fast-io-pro-cross-agent-suite).
 
 ---
 
-## 为什么科研场景特别需要它？
+## Why Do Scientific Workflows Need Dedicated Guardrails?
 
 <p align="center">
-  <img src="./assets/readme/before-after.jpg" width="100%" alt="安装 Sci Fast IO v2.0 前后对比：拦截大文件爆仓、跳过非必要云端审查、单轮拿齐所需上下文">
+  <img src="./assets/readme/before-after.jpg" width="100%" alt="Before vs After Sci Fast IO v2.0: Blocking huge file explosions, skipping redundant cloud review queues, and batching context reads">
 </p>
 
-在默认配置下使用重度推理模型（如 Gemini 4 Carbon / Argon）跑科研项目，时间往往被以下四处悄悄吃掉：
+When running heavy reasoning models (such as Gemini 4 Carbon / Argon) on research repositories with default settings, wall-clock time and context budget are silently drained by four patterns:
 
-1. **零碎多轮读文件**：模型习惯“搜一下 → 想 30 秒 → 读一个脚本 50 行 → 不够再补读一轮”，十几个回合下来光等思考就要好几分钟。
-2. **桌面端云端审查排队**：Antigravity 2.0 桌面端对白名单外的命令（包括 `rg`、`find`，以及带 `&&`、`;`、`cd`、`2>/dev/null` 的命令）每次都要先发给云端小模型审查，额外排队 **2–5 秒**。
-3. **科研大文件与 `.ipynb` 爆仓**：科研目录里常混放着几百 MB 的 `.csv` / `.vcf` / `.fastq`、二进制权重 `.npz` / `.pt` / `.h5ad` / `.nii.gz`，或是嵌满 base64 图片的 `.ipynb`。模型一旦顺手 `read_file` 或对根目录跑 `grep -rn .`，轻则撑爆上下文拖慢后续每一轮推理，重则直接卡死会话。
-4. **挤牙膏式 EDA 试探**：查一张表拆成五六次 `python3 -c` 分别看 `shape`、列名、缺失值和统计检验，每次都重复触发“模型思考 + 云端送审”。
+1. **Fragmented Multi-Turn File Reads**: Searching -> thinking 30s -> reading 50 lines -> reading another 50 lines across a dozen turns eats minutes of reasoning latency.
+2. **Desktop Cloud-Review Queueing**: Non-allowlisted shell commands (`rg`, `find`, or commands chaining `&&`, `;`, `cd`, `2>/dev/null`) trigger a **2–5s** secondary cloud safety check on every invocation in Antigravity Desktop.
+3. **Dataset & `.ipynb` Context Explosions**: Research folders mix 500 MB `.csv` / `.vcf` / `.fastq` tables, binary weights (`.npz`, `.pt`, `.h5ad`, `.safetensors`, `.nii.gz`), and `.ipynb` notebooks packed with single-line base64 plots. One accidental `read_file` or unfiltered `grep -rn .` stalls or ruins the entire session.
+4. **Piecemeal EDA Trial-and-Error**: Splitting dataset inspection into five separate `python3 -c` calls for `shape`, columns, missingness, and summary stats multiplies model thinking + command approval overhead.
 
 ---
 
-## Sci Fast IO v2.0 做了什么？
+## What Does Sci Fast IO v2.0 Do? (Community Edition — Free & MIT)
 
 <p align="center">
-  <img src="./assets/readme/architecture.svg" width="100%" alt="Sci Fast IO v2.0 工作流架构图">
+  <img src="./assets/readme/architecture.svg" width="100%" alt="Sci Fast IO v2.0 Architecture">
 </p>
 
-v2.0 采用 **「本地毫秒级硬护栏 + 高信噪比常驻规则 + 按需探查模板」** 三层协同架构：
+v2.0 combines **a `<50ms` local `PreToolUse` gate + high-signal standing rules + on-demand EDA templates**:
 
-### 1. 本地毫秒级 `PreToolUse` 硬门禁（`pretool_guard.py`，中位耗时 ~44ms）
-纯 Python 3.9+ 标准库实现（零第三方依赖，支持未关闭管道非阻塞帧解析，同时兼容桌面端 `read_file` 与 IDE/CLI `view_file`）：
-- **二进制与压缩格式零容忍拦截**：精准识别 `.parquet` `.feather` `.npz` `.npy` `.pt` `.ckpt` `.safetensors` `.h5` `.h5ad` `.rds` `.bam`、复合后缀 `.nii.gz` `.fastq.gz` `.vcf.gz`、目录型 `.zarr` 以及指向二进制文件的符号链接。
-- **科研文本分级门禁**：
-  - `<= 32 KiB`（如实验指标汇总小表 `metrics.csv`）：**直接放行**，零打扰；
-  - `32 KiB ~ 2 MiB`：仅允许 `<= 80` 行的显式有界读取，并自动检测阻断单行 `> 8 KiB` 的超宽基因表达矩阵；
-  - `>= 2 MiB`：直接拦截并引导使用免审 `head -n 5` 或 `sci-eda`。
-- **Notebook 字节级防爆**：废弃不可靠的行数判断，对 `> 32 KiB` 的 `.ipynb` 阻断全文裸读，防止单行巨型 base64 图像灌满上下文。
-- **灾难级 `grep` 保守拦截**：精准阻断无过滤的根目录递归扫描（`grep -rn '...' .`）或直扫 `.venv` / `wandb` / `lightning_logs`，绝不擅自篡改复杂 Shell 命令。
+### 1. Sub-50ms Local `PreToolUse` Gate (`pretool_guard.py`, ~44ms median)
+Pure Python 3.9+ standard library (zero pip dependencies; non-blocking pipe parser; supports both `read_file` and `view_file`):
+- **Zero-Tolerance Binary & Archive Block**: Blocks raw text reads on `.parquet`, `.feather`, `.npz`, `.npy`, `.pt`, `.ckpt`, `.safetensors`, `.h5`, `.h5ad`, `.rds`, `.bam`, `.nii.gz`, `.fastq.gz`, `.vcf.gz`, `.zarr` directories, and symlinks to binaries.
+- **Tiered Scientific Text Gate**:
+  - `<= 32 KiB` (e.g., `metrics.csv`): **Allowed immediately** with zero friction;
+  - `32 KiB – 2 MiB`: Permits bounded reads (`<= 80` lines) while blocking ultra-wide (`> 8 KiB` single-line) gene/feature matrices;
+  - `>= 2 MiB`: Blocked with guidance to use allowlisted `head -n 5` or `sci-eda`.
+- **Byte-Level `.ipynb` Protection**: Blocks raw full-file reads on notebooks `> 32 KiB` so base64 plots never flood context.
+- **Catastrophic `grep` Guard**: Blocks unfiltered root recursive `grep` (`grep -rn '...' .`) and scans targeting `.venv`, `wandb`, or `lightning_logs`.
 
-### 2. 免审快速通道 + 计算/绘图单轮合并（`rules/AGENTS.md`）
-- **只读检索默认走免审白名单**：`ls` `cat` `head` `tail` `wc` `grep` `diff` `stat` `du` `jq` 及长参数只读 `git` 秒级直通（同时保留效率逃生阀：面对万级文件的深层松散目录，允许改用过滤版 `rg` / `fd` 以最小化总耗时）。
-- **必审任务合并一次跑完**：EDA 统计、`matplotlib` 绘图、`xelatex` / `latexmk` 编译与产物检查合并为单次执行，并用 `| tail -n 30` 截断宏包刷屏日志。
-- **多文件替换三步闭环**：先核对命中数 → 最小范围替换 → `git diff` 复核，保护论文 `\cite{}` 引用键与实验配置安全。
-- **日常问答极简，学术写作不缩水**：日常调试控制在 1,500 字以内、结论与指标先行；撰写论文正文、同行评审（Peer Review）与统计报告时按学术标准完整展开，严禁编造或估算 `p` 值、误差棒与文献 DOI/PMID。
+### 2. Fast-Pass Read Allowlist & Batched Compute Rules (`rules/AGENTS.md`)
+- Routes simple read-only inspections through fast-pass allowlisted commands (`ls`, `cat`, `head`, `tail`, `wc`, `grep`, `diff`, `stat`, `du`, `jq`, and read-only `git`), with an efficiency escape hatch to filtered `rg` / `fd` on deep trees.
+- Batches EDA stats, `matplotlib` rendering, and `xelatex` / `latexmk` builds into single execution turns with truncated log tails (`| tail -n 30`).
+- Enforces 3-step multi-file replacement verification (`\cite{}` safety) and strict scientific numerical integrity (never fabricate `p`-values, error bars, or DOIs/PMIDs).
 
-### 3. 按需加载 `sci-eda` 标准探查技能（`skills/sci-eda/SKILL.md`）
-采用渐进式披露（平时不占主上下文），在探查 `.parquet` / `.csv`、`.h5ad` / `.zarr`、`.npz` / `.pt` / `.safetensors` 或提取大型 `.ipynb` 代码单元时，提供单次即可跑通的标准脚本模板。
+### 3. On-Demand `sci-eda` Templates (`skills/sci-eda/SKILL.md`)
+Progressive-disclosure snippets for inspecting `.parquet`/`.csv`, `.h5ad`/`.zarr`, `.npz`/`.pt`/`.safetensors`, and `.ipynb` cells in one round-trip.
 
 ---
 
-## 安装与管理
+## Community MIT vs. Sci-Fast-IO Pro (Cross-Agent Suite)
 
-### 方式一：使用 `agy` 命令行安装（推荐）
+`antigravity-sci-fast-io` v2.0 remains **100% Free & MIT forever** for Google Antigravity users. For researchers working across **Claude Code, Cursor, GitHub Copilot, Windsurf, Codex & Antigravity** who want standalone Python stdlib CLIs, remote GPU safety, and academic QA hooks, explore the **Sci-Fast-IO Pro** commercial toolkits on [**Agensi.io (`@cheat-s-azuki`)**](https://www.agensi.io/r/CHEATSAZUKI?to=/creators/cheat-s-azuki):
+
+| Capability | Community v2.0 (This Repo) | [**Sci-Fast-IO Pro Suite**](https://www.agensi.io/r/CHEATSAZUKI?to=/creators/cheat-s-azuki) |
+| :--- | :---: | :---: |
+| **License & Price** | **MIT (Free Forever)** | **$29 Suite** *(42% off)* or **$9.99–$14.99** standalone skills |
+| **Supported Coding Agents** | Google Antigravity only | **Claude Code · Cursor · Copilot · Windsurf · Codex · Antigravity** (Local `.zip` + Remote MCP) |
+| **Dataset & Tensor Inspection** | Markdown copy-paste snippets | [**Sci-EDA Context Shield**](https://www.agensi.io/r/CHEATSAZUKI?to=/creators/cheat-s-azuki): Standalone `sci_eda_probe.py` CLI (`<6 KiB` cap; stdlib `.safetensors`/`.npy`/`.ipynb`/`.wav`/`.zarr` parsers + `polars`/`h5py`/`torch`) |
+| **Remote Cloud GPU Ops & Safe Sync** | — | [**Cloud GPU Experiment Guard**](https://www.agensi.io/r/CHEATSAZUKI?to=/creators/cheat-s-azuki): RunPod, Lambda, Vast.ai, Slurm & AutoDL cache redirect, SSH idle-VRAM probe, `dry-run` `rsync`, **pre-shutdown SHA-256 `GREEN_SAFE_TO_SHUTDOWN` gate** |
+| **Anti-Deletion, Frozen Baselines & LaTeX/PPTX QA** | Basic read/grep guard | [**Research Workspace Guardrails**](https://www.agensi.io/r/CHEATSAZUKI?to=/creators/cheat-s-azuki): Blocks unapproved `rm`/`git clean`, SHA-256 frozen baseline locks, secret-leak guard, LaTeX undefined `\cite{}` + stale PDF checks, `.pptx` font QA & 6-agent `install_hooks.py` |
+| **Cross-Agent JSONL Session Search & Repo Distiller** | — | [**Agent Session Ledger**](https://www.agensi.io/r/CHEATSAZUKI?to=/creators/cheat-s-azuki): `O(1)` memory `session_ledger.py` (`<8 KiB` digest) across Claude Code, Cursor, Codex & Antigravity + 2-pass repo onboarding |
+
+<p align="center">
+  <a href="https://www.agensi.io/r/CHEATSAZUKI?to=/creators/cheat-s-azuki"><b>Explore the Sci-Fast-IO Pro Suite on Agensi.io ($29 — Save 42%) →</b></a><br>
+  <sub>Includes the free <a href="https://www.agensi.io/r/CHEATSAZUKI?to=/creators/cheat-s-azuki">Antigravity Fast-IO Workflow Checklist ($0)</a> · 中文文档与跨平台说明请见 <a href="./README_zh.md">简体中文</a></sub>
+</p>
+
+---
+
+## Installation & Management (Community MIT Plugin)
+
+### Option 1: Install via `agy` CLI (Recommended)
 
 ```bash
 git clone https://github.com/youranxiaozhu/antigravity-sci-fast-io.git
@@ -72,20 +98,20 @@ agy plugin install antigravity-sci-fast-io/plugin
 agy plugin enable sci-fast-io
 ```
 
-### 方式二：手动复制到全局插件目录
+### Option 2: Copy to Global Plugins Directory
 
 ```bash
 git clone https://github.com/youranxiaozhu/antigravity-sci-fast-io.git
 cp -R antigravity-sci-fast-io/plugin ~/.gemini/config/plugins/sci-fast-io
 ```
 
-> **提示**：首次安装包含 `hooks.json` 和 `skills/` 的插件后，重启一次 Antigravity 桌面端即可在所有工作区全面激活。日常开关可在左侧 **Skills & Customizations → Plugins** 面板一键切换，或运行 `agy plugin disable sci-fast-io`。
+> **Tip**: Restart Antigravity Desktop once after initial installation so `hooks.json` and `skills/` activate across all workspaces. Toggle anytime in **Skills & Customizations → Plugins** or via `agy plugin disable sci-fast-io`.
 
 ---
 
-## 本地运行测试
+## Run Local Automated Tests
 
-仓库内置 19 项无外部依赖的自动化回归测试（覆盖分级体积阈值、超宽单行表、复合后缀、`.zarr` 目录、符号链接、中文/空格路径、危险 `grep` 识别及未关闭 `stdin` 管道压力测试）：
+Includes 19 zero-dependency regression tests covering tiered byte thresholds, ultra-wide single-line matrices, compound suffixes, `.zarr` directories, symlinks, CJK/space paths, hazardous `grep` patterns, and unclosed `stdin` pipes:
 
 ```bash
 python3 tests/test_pretool_guard.py
@@ -93,26 +119,30 @@ python3 tests/test_pretool_guard.py
 
 ---
 
-## 仓库目录结构
+## Repository Structure
 
 ```text
 antigravity-sci-fast-io/
-├── plugin/                        # Antigravity 标准插件包
-│   ├── plugin.json                # 插件元数据 (v2.0.0)
-│   ├── hooks.json                 # PreToolUse 本地硬门禁配置
+├── plugin/                        # Standard Antigravity plugin package
+│   ├── plugin.json                # Plugin manifest (v2.0.0)
+│   ├── hooks.json                 # PreToolUse local hard gate config
 │   ├── scripts/
-│   │   └── pretool_guard.py       # 毫秒级文件与命令守卫脚本
+│   │   └── pretool_guard.py       # Sub-50ms file & command guard script
 │   ├── rules/
-│   │   └── AGENTS.md              # 常驻科研加速与真实性规则
+│   │   └── AGENTS.md              # Standing scientific velocity & integrity rules
 │   ├── skills/
-│   │   └── sci-eda/SKILL.md       # 按需科研数据单次探查模板库
-│   └── assets/logo.svg            # 插件图标
-├── assets/readme/                 # README 插画与矢量架构图
-├── tests/test_pretool_guard.py    # 19 项自动化回归测试套件
-└── LICENSE                        # MIT 许可证
+│   │   └── sci-eda/SKILL.md       # On-demand single-shot EDA templates
+│   └── assets/logo.svg            # Plugin icon
+├── assets/readme/                 # README illustrations & architecture SVG
+├── tests/test_pretool_guard.py    # 19 automated regression tests
+├── README.md                      # English documentation
+├── README_zh.md                   # Chinese documentation (简体中文)
+└── LICENSE                        # MIT License
 ```
 
-## 致谢与许可
+---
 
-- 核心“少走回合、免审白名单直通”思路源自 [@oil-oil](https://github.com/oil-oil) 的优秀开源项目 [`agy-fast-io`](https://github.com/oil-oil/agy-fast-io)。
-- 本项目采用 [MIT License](LICENSE) 开源。
+## Credits & License
+
+- The core "fewer round-trips & desktop allowlist fast-pass" philosophy was inspired by [@oil-oil](https://github.com/oil-oil)'s open-source project [`agy-fast-io`](https://github.com/oil-oil/agy-fast-io).
+- Released under the [MIT License](LICENSE) by Cheat s (AZUKI) / [@youranxiaozhu](https://github.com/youranxiaozhu).
