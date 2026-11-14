@@ -1,4 +1,4 @@
-# Sci Fast IO v2.0.0（科研极速读写与防爆护栏插件）
+# Antigravity Sci Fast IO v2.0.0（科研极速读写与防爆护栏插件）
 
 基于 [`oil-oil/agy-fast-io`](https://github.com/oil-oil/agy-fast-io) 深度升级的科研工作流加速系统，在同一插件内集成 **轻量常驻规则 + 本地毫秒级 `PreToolUse` 硬护栏 + 按需 `sci-eda` 数据探查技能**。
 

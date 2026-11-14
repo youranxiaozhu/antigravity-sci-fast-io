@@ -1,6 +1,8 @@
 <p align="center">
-  <img src="./assets/readme/hero.jpg" width="100%" alt="Sci Fast IO — High-Velocity Guardrails & Data I/O for Scientific Agents">
+  <img src="./assets/readme/hero.jpg" width="100%" alt="Antigravity Sci Fast IO — High-Velocity Guardrails & Data I/O for Scientific Agents">
 </p>
+
+<h1 align="center">Antigravity Sci Fast IO</h1>
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"></a>
@@ -10,7 +12,7 @@
   <img src="https://img.shields.io/badge/Version-2.0.0-F59E0B" alt="Version 2.0.0">
 </p>
 
-**Sci Fast IO** 是专为 **科研计算、生信/化学信息学数据分析、深度学习实验与 LaTeX 学术写作** 打造的 Google Antigravity 本地加速与防爆护栏插件（受 [`oil-oil/agy-fast-io`](https://github.com/oil-oil/agy-fast-io) 启发并针对科研场景深度重构）。
+**Antigravity Sci Fast IO**（插件 ID：`sci-fast-io`）是专为 **科研计算、生信/化学信息学数据分析、深度学习实验与 LaTeX 学术写作** 打造的 **Google Antigravity** 本地加速与防爆护栏插件（受 [`oil-oil/agy-fast-io`](https://github.com/oil-oil/agy-fast-io) 启发并针对科研场景深度重构）。
 
 它在一个轻量插件包里同时解决科研 Agent 最让人头疼的两件事：**「每步思考等太久」** 与 **「误读大文件瞬间把上下文搞崩」**。
 
@@ -65,16 +67,16 @@ v2.0 采用 **「本地毫秒级硬护栏 + 高信噪比常驻规则 + 按需探
 ### 方式一：使用 `agy` 命令行安装（推荐）
 
 ```bash
-git clone https://github.com/youranxiaozhu/sci-fast-io.git
-agy plugin install sci-fast-io/plugin
+git clone https://github.com/youranxiaozhu/antigravity-sci-fast-io.git
+agy plugin install antigravity-sci-fast-io/plugin
 agy plugin enable sci-fast-io
 ```
 
 ### 方式二：手动复制到全局插件目录
 
 ```bash
-git clone https://github.com/youranxiaozhu/sci-fast-io.git
-cp -R sci-fast-io/plugin ~/.gemini/config/plugins/sci-fast-io
+git clone https://github.com/youranxiaozhu/antigravity-sci-fast-io.git
+cp -R antigravity-sci-fast-io/plugin ~/.gemini/config/plugins/sci-fast-io
 ```
 
 > **提示**：首次安装包含 `hooks.json` 和 `skills/` 的插件后，重启一次 Antigravity 桌面端即可在所有工作区全面激活。日常开关可在左侧 **Skills & Customizations → Plugins** 面板一键切换，或运行 `agy plugin disable sci-fast-io`。
@@ -94,7 +96,7 @@ python3 tests/test_pretool_guard.py
 ## 仓库目录结构
 
 ```text
-sci-fast-io/
+antigravity-sci-fast-io/
 ├── plugin/                        # Antigravity 标准插件包
 │   ├── plugin.json                # 插件元数据 (v2.0.0)
 │   ├── hooks.json                 # PreToolUse 本地硬门禁配置
