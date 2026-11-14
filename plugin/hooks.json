@@ -1,0 +1,17 @@
+{
+  "sci-fast-io-guard": {
+    "enabled": true,
+    "PreToolUse": [
+      {
+        "matcher": "view_file.*|read_file.*|run_command",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ./scripts/pretool_guard.py",
+            "timeout": 3
+          }
+        ]
+      }
+    ]
+  }
+}

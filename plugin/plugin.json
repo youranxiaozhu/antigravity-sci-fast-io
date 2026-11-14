@@ -1,0 +1,17 @@
+{
+  "name": "sci-fast-io",
+  "displayName": "Sci Fast IO（科研极速读写）",
+  "version": "2.0.0",
+  "description": "科研工作流加速与防爆护栏插件 v2.0：结合桌面端免审白名单加速、PreToolUse 本地大文件/危险 grep 硬门禁、按需 sci-eda 数据探查模板与子代理上下文分流。",
+  "logo": "assets/logo.svg",
+  "author": {
+    "name": "youranxiaozhu",
+    "url": "https://github.com/youranxiaozhu"
+  },
+  "repository": "https://github.com/youranxiaozhu/sci-fast-io",
+  "suggestedPrompts": [
+    "快速定位当前项目中模型结构与损失函数定义的位置并简述核心逻辑",
+    "使用 sci-eda 单次探查数据目录下各文件的体积、字段类型与缺失率",
+    "修改论文配图脚本样式并一次性完成重绘与产物检查"
+  ]
+}

@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Sci Fast IO v2.0 科研加速与防爆工作流架构图</title>
+  <desc id="desc">展示 Antigravity 科研任务的一轮循环中，Sci Fast IO v2.0 如何在模型规划、PreToolUse 毫秒级硬门禁、桌面端免审白名单直通、单轮合并计算与 sci-eda 探查模板之间协同提速。</desc>
+  <style>
+    .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+  </style>
+  <defs>
+    <marker id="arrow-dark" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#1E293B"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#15803D"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#B91C1C"/>
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#0369A1"/>
+    </marker>
+  </defs>
+
+  <!-- Warm archival paper background -->
+  <rect width="1200" height="760" rx="26" fill="#F6F1E7"/>
+  <rect x="18" y="18" width="1164" height="724" rx="20" fill="none" stroke="#E2D9C8" stroke-width="2"/>
+
+  <!-- Header -->
+  <g class="sans">
+    <text x="56" y="74" font-size="34" font-weight="800" fill="#1E1D1B">Sci Fast IO v2.0 是怎么既提速、又防崩的？</text>
+    <text x="56" y="110" font-size="19" fill="#57534E">Antigravity 桌面版科研循环拆解：压缩 <tspan fill="#0369A1" font-weight="700">模型回合</tspan>、绕开 <tspan fill="#15803D" font-weight="700">非必要云端审查</tspan>、硬拦截 <tspan fill="#B91C1C" font-weight="700">灾难级大文件与裸扫</tspan></text>
+  </g>
+
+  <!-- Legend badges top-right -->
+  <g class="sans" transform="translate(810, 48)">
+    <rect x="0" y="0" width="160" height="34" rx="17" fill="#DCFCE7" stroke="#15803D" stroke-width="1.8"/>
+    <text x="80" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#14532D">免审极速通道 &lt;0.1s</text>
+    <rect x="172" y="0" width="168" height="34" rx="17" fill="#FEE2E2" stroke="#B91C1C" stroke-width="1.8"/>
+    <text x="256" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#7F1D1D">毫秒级硬门禁 ~54ms</text>
+  </g>
+
+  <!-- Node 1: Model Planning Turn -->
+  <g class="sans">
+    <rect x="52" y="220" width="256" height="195" rx="16" fill="#FFFFFF" stroke="#1E293B" stroke-width="2.5"/>
+    <circle cx="80" cy="252" r="15" fill="#0284C7"/>
+    <text x="80" y="258" text-anchor="middle" font-size="16" font-weight="800" fill="#FFFFFF">1</text>
+    <text x="104" y="258" font-size="21" font-weight="800" fill="#0F172A">模型思考与并行派发</text>
+    <text x="72" y="292" font-size="15" fill="#475569">单轮推理 15–45s（最大耗时项）</text>
+    <line x1="72" y1="308" x2="288" y2="308" stroke="#E2E8F0" stroke-width="1.5"/>
+    <text x="72" y="334" font-size="14.5" font-weight="600" fill="#0369A1">• 先 1 条 grep 定位，下轮并行读齐</text>
+    <text x="72" y="359" font-size="14.5" font-weight="600" fill="#0369A1">• 同轮顺带汇报 1–2 句进度，零空转</text>
+    <text x="72" y="384" font-size="14.5" font-weight="600" fill="#0369A1">• 广度调研分流至 research 子代理</text>
+  </g>
+
+  <!-- Arrow 1 -> 2 -->
+  <path d="M308 318 H356" fill="none" stroke="#1E293B" stroke-width="2.6" marker-end="url(#arrow-dark)"/>
+
+  <!-- Node 2: PreToolUse Local Guard -->
+  <g class="sans">
+    <rect x="364" y="205" width="272" height="225" rx="16" fill="#FFFBEB" stroke="#D97706" stroke-width="2.5"/>
+    <circle cx="392" cy="238" r="15" fill="#B91C1C"/>
+    <text x="392" y="244" text-anchor="middle" font-size="16" font-weight="800" fill="#FFFFFF">2</text>
+    <text x="416" y="244" font-size="21" font-weight="800" fill="#1E1D1B">PreToolUse 本地门禁</text>
+    <text x="384" y="272" class="mono" font-size="13.5" fill="#92400E">pretool_guard.py (P50: 54ms)</text>
+    <line x1="384" y1="286" x2="616" y2="286" stroke="#FDE68A" stroke-width="1.5"/>
+    <text x="384" y="312" font-size="14.5" fill="#78350F">• 二进制零容忍 (.npz/.pt/.nii.gz/.zarr)</text>
+    <text x="384" y="337" font-size="14.5" fill="#78350F">• 文本分级：≤32KB 放行 / &gt;2MB 拒止</text>
+    <text x="384" y="362" font-size="14.5" fill="#78350F">• Notebook 按字节拦截 (&gt;32KB 防爆)</text>
+    <text x="384" y="387" font-size="14.5" fill="#78350F">• 拦截根目录无过滤 grep -rn .</text>
+    <text x="384" y="411" font-size="13.5" font-weight="700" fill="#15803D">✓ 合规调用立即放行进入下一步</text>
+  </g>
+
+  <!-- Deny Drop-down Box from Node 2 -->
+  <path d="M500 430 V482" fill="none" stroke="#B91C1C" stroke-width="2.5" stroke-dasharray="5,4" marker-end="url(#arrow-red)"/>
+  <g class="sans">
+    <rect x="352" y="490" width="296" height="96" rx="14" fill="#FEF2F2" stroke="#B91C1C" stroke-width="2"/>
+    <text x="500" y="520" text-anchor="middle" font-size="16.5" font-weight="800" fill="#991B1B">高危操作秒级拒止 (deny)</text>
+    <text x="500" y="546" text-anchor="middle" font-size="14" fill="#7F1D1D">阻止 100MB CSV / base64 图片撑爆上下文</text>
+    <text x="500" y="569" text-anchor="middle" font-size="14" font-weight="700" fill="#0369A1">自动提示改调 sci-eda 单次探查模板</text>
+  </g>
+
+  <!-- Split Arrows from Node 2 -> Node 3A (Top Fast Lane) & Node 3B (Bottom Batch Lane) -->
+  <path d="M636 275 H682 V222 H722" fill="none" stroke="#15803D" stroke-width="2.8" marker-end="url(#arrow-green)"/>
+  <path d="M636 360 H682 V432 H722" fill="none" stroke="#0369A1" stroke-width="2.6" marker-end="url(#arrow-blue)"/>
+
+  <!-- Node 3A: Desktop Allowlist Fast Lane -->
+  <g class="sans">
+    <rect x="730" y="142" width="416" height="164" rx="16" fill="#F0FDF4" stroke="#15803D" stroke-width="2.5"/>
+    <circle cx="758" cy="175" r="15" fill="#15803D"/>
+    <text x="758" y="181" text-anchor="middle" font-size="16" font-weight="800" fill="#FFFFFF">3</text>
+    <text x="782" y="181" font-size="20.5" font-weight="800" fill="#14532D">检索与看表头：免审白名单直通 (&lt;0.1s)</text>
+    <text x="750" y="211" class="mono" font-size="14" fill="#166534">grep -Rn -I | head · ls -lh · wc -l · jq · git diff</text>
+    <line x1="750" y1="225" x2="1126" y2="225" stroke="#BBF7D0" stroke-width="1.5"/>
+    <text x="750" y="252" font-size="14.5" fill="#14532D">• 严格使用裸命令 + 单管道，跳过 2–5s 云端 Flash 审查</text>
+    <text x="750" y="277" font-size="14.5" fill="#14532D">• 附带效率逃生阀：万级松散文件目录允许改用过滤版 rg/fd</text>
+  </g>
+
+  <!-- Node 3B: Batched Scientific Execution + sci-eda -->
+  <g class="sans">
+    <rect x="730" y="342" width="416" height="190" rx="16" fill="#F0F9FF" stroke="#0369A1" stroke-width="2.5"/>
+    <circle cx="758" cy="375" r="15" fill="#0369A1"/>
+    <text x="758" y="381" text-anchor="middle" font-size="16" font-weight="800" fill="#FFFFFF">4</text>
+    <text x="782" y="381" font-size="20.5" font-weight="800" fill="#0C4A6E">科研计算、绘图与编译：合并一次送审</text>
+    <text x="750" y="411" class="mono" font-size="14" fill="#075985">python3 (sci-eda) · uv · Rscript · xelatex &amp;&amp; lint</text>
+    <line x1="750" y1="425" x2="1126" y2="425" stroke="#BAE6FD" stroke-width="1.5"/>
+    <text x="750" y="451" font-size="14.5" fill="#0C4A6E">• 按需加载 sci-eda：1 次脚本输出维度/缺失率/张量键名</text>
+    <text x="750" y="476" font-size="14.5" fill="#0C4A6E">• 绘图/LaTeX 编译校验合并单次 &&，接 | tail -n 30 防刷屏</text>
+    <text x="750" y="501" font-size="14.5" fill="#0C4A6E">• 多文件替换三步闭环：先核对数量 → 最小修改 → git diff</text>
+  </g>
+
+  <!-- Feedback return loop back to Node 1 / Final Delivery -->
+  <path d="M1146 224 H1170 V658 H180 V423" fill="none" stroke="#1E293B" stroke-width="2.4" marker-end="url(#arrow-dark)"/>
+  <path d="M1146 437 H1170" fill="none" stroke="#1E293B" stroke-width="2.4"/>
+
+  <!-- Bottom summary bar on return loop -->
+  <g class="sans">
+    <rect x="275" y="628" width="785" height="58" rx="29" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+    <text x="667" y="663" text-anchor="middle" font-size="16.5" font-weight="700" fill="#1E293B">
+      结果干净回流模型 → 日常调试 ≤1,500 字结论先行 ｜ 论文撰稿/审稿完整交付且严守真实数据红线
+    </text>
+  </g>
+</svg>
