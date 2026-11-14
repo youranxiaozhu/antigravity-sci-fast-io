@@ -1,11 +1,12 @@
 <p align="center">
-  <img src="./assets/readme/hero.jpg" width="100%" alt="Sci Fast IO — Fast & Safe Scientific Workflows for Antigravity">
+  <img src="./assets/readme/hero.jpg" width="100%" alt="Sci Fast IO — High-Velocity Guardrails & Data I/O for Scientific Agents">
 </p>
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"></a>
   <img src="https://img.shields.io/badge/Antigravity-2.0%20%7C%20IDE%20%7C%20CLI-0284C7" alt="Antigravity 2.0 | IDE | CLI">
   <img src="https://img.shields.io/badge/Python-3.9%2B%20(Stdlib%20Only)-16A34A" alt="Python 3.9+ Stdlib Only">
+  <img src="https://img.shields.io/badge/Co--Built%20with-Gemini-4285F4?logo=googlegemini&logoColor=white" alt="Co-Built with Gemini">
   <img src="https://img.shields.io/badge/Version-2.0.0-F59E0B" alt="Version 2.0.0">
 </p>
 
@@ -38,7 +39,7 @@
 
 v2.0 采用 **「本地毫秒级硬护栏 + 高信噪比常驻规则 + 按需探查模板」** 三层协同架构：
 
-### 1. 本地毫秒级 `PreToolUse` 硬门禁（`pretool_guard.py`，中位耗时 ~54ms）
+### 1. 本地毫秒级 `PreToolUse` 硬门禁（`pretool_guard.py`，中位耗时 ~44ms）
 纯 Python 3.9+ 标准库实现（零第三方依赖，支持未关闭管道非阻塞帧解析，同时兼容桌面端 `read_file` 与 IDE/CLI `view_file`）：
 - **二进制与压缩格式零容忍拦截**：精准识别 `.parquet` `.feather` `.npz` `.npy` `.pt` `.ckpt` `.safetensors` `.h5` `.h5ad` `.rds` `.bam`、复合后缀 `.nii.gz` `.fastq.gz` `.vcf.gz`、目录型 `.zarr` 以及指向二进制文件的符号链接。
 - **科研文本分级门禁**：
