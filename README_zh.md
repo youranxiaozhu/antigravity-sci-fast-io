@@ -11,7 +11,7 @@
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"></a>
   <img src="https://img.shields.io/badge/Antigravity-2.0%20%7C%20IDE%20%7C%20CLI-0284C7" alt="Antigravity 2.0 | IDE | CLI">
-  <a href="https://www.agensi.io/r/CHEATSAZUKI?to=/creators/cheat-s-azuki"><img src="https://img.shields.io/badge/Pro%20跨端专业版-Claude%20Code%20%7C%20Cursor%20%7C%20Copilot%20%7C%20Windsurf-7C3AED" alt="Sci-Fast-IO Pro Cross-Agent Suite"></a>
+  <a href="https://www.agensi.io/r/CHEATSAZUKI?to=/bundles/sci-fast-io-pro-scientific-agent-suite"><img src="https://img.shields.io/badge/Pro%20跨端专业版-Claude%20Code%20%7C%20Cursor%20%7C%20Copilot%20%7C%20Windsurf-7C3AED" alt="Sci-Fast-IO Pro Cross-Agent Suite"></a>
   <img src="https://img.shields.io/badge/Python-3.9%2B%20(Stdlib%20Only)-16A34A" alt="Python 3.9+ Stdlib Only">
   <img src="https://img.shields.io/badge/Co--Built%20with-Gemini-4285F4?logo=googlegemini&logoColor=white" alt="Co-Built with Gemini">
   <img src="https://img.shields.io/badge/Version-2.0.0-F59E0B" alt="Version 2.0.0">
@@ -71,19 +71,20 @@ v2.0 采用 **「本地毫秒级硬护栏 + 高信噪比常驻规则 + 按需探
 
 ## MIT 开源社区版 vs. Sci-Fast-IO Pro 跨平台专业版
 
-本仓库 `v2.0` 将**永久保持免费与 MIT 开源**。如果你同时在 **Claude Code、Cursor、GitHub Copilot、Windsurf、Codex 与 Antigravity** 上开展科研，或需要独立可执行的零依赖 CLI 工具集与全生命周期安全护栏，欢迎前往 [**Agensi.io (`@cheat-s-azuki`)**](https://www.agensi.io/r/CHEATSAZUKI?to=/creators/cheat-s-azuki) 获取全新重构的 **Sci-Fast-IO Pro 专业版**：
+本仓库 `v2.0` 将**永久保持免费与 MIT 开源**。如果你同时在 **Claude Code、Cursor、GitHub Copilot、Windsurf、Codex 与 Antigravity** 上开展科研，或需要独立可执行的零依赖 CLI 工具集与全生命周期安全护栏，欢迎前往 [**Agensi.io (`AZUKI` / `@cheat-s-azuki`)**](https://www.agensi.io/r/CHEATSAZUKI?to=/creators/cheat-s-azuki) 获取全新重构的 **Sci-Fast-IO Pro 专业版**：
 
-| 核心能力 | MIT 社区版 (本仓库 v2.0) | [**Sci-Fast-IO Pro 跨端专业版**](https://www.agensi.io/r/CHEATSAZUKI?to=/creators/cheat-s-azuki) |
+| 核心能力 | MIT 社区版 (本仓库 v2.0) | [**Sci-Fast-IO Pro 跨端专业版**](https://www.agensi.io/r/CHEATSAZUKI?to=/bundles/sci-fast-io-pro-scientific-agent-suite) |
 | :--- | :---: | :---: |
-| **授权与获取方式** | **MIT 永久免费** | **Agensi 全家桶 $29**（立省 42%，亦支持 `$9.99–$14.99` 按需选购单模块） |
+| **授权与获取方式** | **MIT 永久免费** | [**Agensi 全家桶 $29.00**](https://www.agensi.io/r/CHEATSAZUKI?to=/bundles/sci-fast-io-pro-scientific-agent-suite)（立省 42%，亦支持 `$9.99–$14.99` 按需选购单模块） |
 | **支持平台** | 仅 Google Antigravity | **Claude Code · Cursor · Copilot · Windsurf · Codex · Antigravity** 六端通用（支持本地 `.zip` 与 Remote MCP） |
-| **15+ 种科研数据防爆探查** | Markdown 代码片段 | [**Sci-EDA Context Shield**](https://www.agensi.io/r/CHEATSAZUKI?to=/creators/cheat-s-azuki)：独立 `sci_eda_probe.py` CLI（`<6 KiB` 硬上限，无需装 torch 即可纯标准库解析 `.safetensors/.npy/.ipynb/.wav/.zarr`） |
-| **AutoDL / RunPod 云端 GPU 运维与关机对账** | — | [**Cloud GPU Experiment Guard**](https://www.agensi.io/r/CHEATSAZUKI?to=/creators/cheat-s-azuki)：AutoDL/SeetaCloud/RunPod/Slurm 数据盘缓存分流、SSH 闲置烧钱告警、默认 `dry-run` 安全 `rsync`、**关机前 SHA-256 `GREEN_SAFE_TO_SHUTDOWN` 对账门禁** |
-| **防误删 / 冻结基线 / LaTeX & PPTX 质检** | 基础文件读取与 grep 门禁 | [**Research Workspace Guardrails**](https://www.agensi.io/r/CHEATSAZUKI?to=/creators/cheat-s-azuki)：拦截未授权 `rm / git clean`、SHA-256 锁定论文冻结基线、防明文私钥泄露、LaTeX 漏引 `\cite{}` 与过期 PDF 检测、PPTX 禁用字体 `Cambria Math` 扫描 + 六端一键 `install_hooks.py` |
-| **百兆会话台账检索与仓库快速导读** | — | [**Agent Session Ledger**](https://www.agensi.io/r/CHEATSAZUKI?to=/creators/cheat-s-azuki)：`O(1)` 内存流式检索 Claude Code / Cursor / Codex / Antigravity 历史 JSONL（`<8 KiB` 摘要）+ 陌生仓库两轮导读与 SOP 蒸馏 |
+| **15+ 种科研数据防爆探查** | Markdown 代码片段 | [**Sci-EDA Context Shield**](https://www.agensi.io/r/CHEATSAZUKI?to=/skills/sci-eda-context-shield-for-scientific-data)：独立 `sci_eda_probe.py` CLI（`<6 KiB` 硬上限，无需装 torch 即可纯标准库解析 `.safetensors/.npy/.ipynb/.wav/.zarr`） |
+| **AutoDL / RunPod 云端 GPU 运维与关机对账** | — | [**Cloud GPU Experiment Guard**](https://www.agensi.io/r/CHEATSAZUKI?to=/skills/cloud-gpu-experiment-ops-for-runpod-lambda)：AutoDL/SeetaCloud/RunPod/Slurm 数据盘缓存分流、SSH 闲置烧钱告警、默认 `dry-run` 安全 `rsync`、**关机前 SHA-256 `GREEN_SAFE_TO_SHUTDOWN` 对账门禁** |
+| **防误删 / 冻结基线 / LaTeX & PPTX 质检** | 基础文件读取与 grep 门禁 | [**Research Workspace Guardrails**](https://www.agensi.io/r/CHEATSAZUKI?to=/skills/research-workspace-guardrails)：拦截未授权 `rm / git clean`、SHA-256 锁定论文冻结基线、防明文私钥泄露、LaTeX 漏引 `\cite{}` 与过期 PDF 检测、PPTX 禁用字体 `Cambria Math` 扫描 + 六端一键 `install_hooks.py` |
+| **百兆会话台账检索与仓库快速导读** | — | [**Agent Session Ledger**](https://www.agensi.io/r/CHEATSAZUKI?to=/skills/agent-session-ledger-and-repo-distiller)：`O(1)` 内存流式检索 Claude Code / Cursor / Codex / Antigravity 历史 JSONL（`<8 KiB` 摘要）+ 陌生仓库两轮导读与 SOP 蒸馏 |
 
 <p align="center">
-  <a href="https://www.agensi.io/r/CHEATSAZUKI?to=/creators/cheat-s-azuki"><b>前往 Agensi.io 探索 Sci-Fast-IO Pro 跨端科研套件（$29 全家桶立省 42%，含 $0 免费极速清单） →</b></a>
+  <a href="https://www.agensi.io/r/CHEATSAZUKI?to=/bundles/sci-fast-io-pro-scientific-agent-suite"><b>前往 Agensi.io 获取 Sci-Fast-IO Pro 跨端科研套件（$29.00 全家桶立省 42%） →</b></a><br>
+  <sub>同享免费跨端工作流清单：<a href="https://www.agensi.io/r/CHEATSAZUKI?to=/skills/antigravity-fast-io-workflow-checklist">Antigravity Fast-IO Workflow Checklist ($0)</a></sub>
 </p>
 
 ---
