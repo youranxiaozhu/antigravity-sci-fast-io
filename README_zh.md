@@ -75,15 +75,15 @@ v2.0 采用 **「本地毫秒级硬护栏 + 高信噪比常驻规则 + 按需探
 
 | 核心能力 | MIT 社区版 (本仓库 v2.0) | [**Sci-Fast-IO Pro 跨端专业版**](https://www.agensi.io/r/CHEATSAZUKI?to=/bundles/sci-fast-io-pro-scientific-agent-suite) |
 | :--- | :---: | :---: |
-| **授权与获取方式** | **MIT 永久免费** | [**Agensi 全家桶 $29.00**](https://www.agensi.io/r/CHEATSAZUKI?to=/bundles/sci-fast-io-pro-scientific-agent-suite)（立省 42%，亦支持 `$9.99–$14.99` 按需选购单模块） |
+| **授权与获取方式** | **MIT 永久免费** | [**Agensi 全家桶 $19.99**](https://www.agensi.io/r/CHEATSAZUKI?to=/bundles/sci-fast-io-pro-scientific-agent-suite)（立省 60%，亦支持 `$9.99–$14.99` 按需选购单模块） |
 | **支持平台** | 仅 Google Antigravity | **Claude Code · Cursor · Copilot · Windsurf · Codex · Antigravity** 六端通用（支持本地 `.zip` 与 Remote MCP） |
 | **15+ 种科研数据防爆探查** | Markdown 代码片段 | [**Sci-EDA Context Shield**](https://www.agensi.io/r/CHEATSAZUKI?to=/skills/sci-eda-context-shield-for-scientific-data)：独立 `sci_eda_probe.py` CLI（`<6 KiB` 硬上限，无需装 torch 即可纯标准库解析 `.safetensors/.npy/.ipynb/.wav/.zarr`） |
-| **AutoDL / RunPod 云端 GPU 运维与关机对账** | — | [**Cloud GPU Experiment Guard**](https://www.agensi.io/r/CHEATSAZUKI?to=/skills/cloud-gpu-experiment-ops-for-runpod-lambda)：AutoDL/SeetaCloud/RunPod/Slurm 数据盘缓存分流、SSH 闲置烧钱告警、默认 `dry-run` 安全 `rsync`、**关机前 SHA-256 `GREEN_SAFE_TO_SHUTDOWN` 对账门禁** |
+| **AutoDL / RunPod 云端 GPU 运维与关机对账** | — | [**Cloud GPU Experiment Ops**](https://www.agensi.io/r/CHEATSAZUKI?to=/skills/cloud-gpu-experiment-ops-for-runpod-lambda)：AutoDL/SeetaCloud/RunPod/Slurm 数据盘缓存分流、SSH 闲置烧钱告警、默认 `dry-run` 安全 `rsync`、**关机前 SHA-256 `GREEN_SAFE_TO_SHUTDOWN` 对账门禁** |
 | **防误删 / 冻结基线 / LaTeX & PPTX 质检** | 基础文件读取与 grep 门禁 | [**Research Workspace Guardrails**](https://www.agensi.io/r/CHEATSAZUKI?to=/skills/research-workspace-guardrails)：拦截未授权 `rm / git clean`、SHA-256 锁定论文冻结基线、防明文私钥泄露、LaTeX 漏引 `\cite{}` 与过期 PDF 检测、PPTX 禁用字体 `Cambria Math` 扫描 + 六端一键 `install_hooks.py` |
 | **百兆会话台账检索与仓库快速导读** | — | [**Agent Session Ledger**](https://www.agensi.io/r/CHEATSAZUKI?to=/skills/agent-session-ledger-and-repo-distiller)：`O(1)` 内存流式检索 Claude Code / Cursor / Codex / Antigravity 历史 JSONL（`<8 KiB` 摘要）+ 陌生仓库两轮导读与 SOP 蒸馏 |
 
 <p align="center">
-  <a href="https://www.agensi.io/r/CHEATSAZUKI?to=/bundles/sci-fast-io-pro-scientific-agent-suite"><b>前往 Agensi.io 获取 Sci-Fast-IO Pro 跨端科研套件（$29.00 全家桶立省 42%） →</b></a><br>
+  <a href="https://www.agensi.io/r/CHEATSAZUKI?to=/bundles/sci-fast-io-pro-scientific-agent-suite"><b>前往 Agensi.io 获取 Sci-Fast-IO Pro 跨端科研套件（$19.99 全家桶立省 60%） →</b></a><br>
   <sub>同享免费跨端工作流清单：<a href="https://www.agensi.io/r/CHEATSAZUKI?to=/skills/antigravity-fast-io-workflow-checklist">Antigravity Fast-IO Workflow Checklist ($0)</a></sub>
 </p>
 

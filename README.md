@@ -74,15 +74,15 @@ Progressive-disclosure snippets for inspecting `.parquet`/`.csv`, `.h5ad`/`.zarr
 
 | Capability | Community v2.0 (This Repo) | [**Sci-Fast-IO Pro Suite**](https://www.agensi.io/r/CHEATSAZUKI?to=/bundles/sci-fast-io-pro-scientific-agent-suite) |
 | :--- | :---: | :---: |
-| **License & Price** | **MIT (Free Forever)** | [**$29.00 Suite**](https://www.agensi.io/r/CHEATSAZUKI?to=/bundles/sci-fast-io-pro-scientific-agent-suite) *(42% off)* or **$9.99–$14.99** standalone skills |
+| **License & Price** | **MIT (Free Forever)** | [**$19.99 Suite**](https://www.agensi.io/r/CHEATSAZUKI?to=/bundles/sci-fast-io-pro-scientific-agent-suite) *(60% off)* or **$9.99–$14.99** standalone skills |
 | **Supported Coding Agents** | Google Antigravity only | **Claude Code · Cursor · Copilot · Windsurf · Codex · Antigravity** (Local `.zip` + Remote MCP) |
 | **Dataset & Tensor Inspection** | Markdown copy-paste snippets | [**Sci-EDA Context Shield**](https://www.agensi.io/r/CHEATSAZUKI?to=/skills/sci-eda-context-shield-for-scientific-data): Standalone `sci_eda_probe.py` CLI (`<6 KiB` cap; stdlib `.safetensors`/`.npy`/`.ipynb`/`.wav`/`.zarr` parsers + `polars`/`h5py`/`torch`) |
-| **Remote Cloud GPU Ops & Safe Sync** | — | [**Cloud GPU Experiment Guard**](https://www.agensi.io/r/CHEATSAZUKI?to=/skills/cloud-gpu-experiment-ops-for-runpod-lambda): RunPod, Lambda, Vast.ai, Slurm & AutoDL cache redirect, SSH idle-VRAM probe, `dry-run` `rsync`, **pre-shutdown SHA-256 `GREEN_SAFE_TO_SHUTDOWN` gate** |
+| **Remote Cloud GPU Ops & Safe Sync** | — | [**Cloud GPU Experiment Ops**](https://www.agensi.io/r/CHEATSAZUKI?to=/skills/cloud-gpu-experiment-ops-for-runpod-lambda): RunPod, Lambda, Vast.ai, Slurm & AutoDL cache redirect, SSH idle-VRAM probe, `dry-run` `rsync`, **pre-shutdown SHA-256 `GREEN_SAFE_TO_SHUTDOWN` gate** |
 | **Anti-Deletion, Frozen Baselines & LaTeX/PPTX QA** | Basic read/grep guard | [**Research Workspace Guardrails**](https://www.agensi.io/r/CHEATSAZUKI?to=/skills/research-workspace-guardrails): Blocks unapproved `rm`/`git clean`, SHA-256 frozen baseline locks, secret-leak guard, LaTeX undefined `\cite{}` + stale PDF checks, `.pptx` font QA & 6-agent `install_hooks.py` |
 | **Cross-Agent JSONL Session Search & Repo Distiller** | — | [**Agent Session Ledger**](https://www.agensi.io/r/CHEATSAZUKI?to=/skills/agent-session-ledger-and-repo-distiller): `O(1)` memory `session_ledger.py` (`<8 KiB` digest) across Claude Code, Cursor, Codex & Antigravity + 2-pass repo onboarding |
 
 <p align="center">
-  <a href="https://www.agensi.io/r/CHEATSAZUKI?to=/bundles/sci-fast-io-pro-scientific-agent-suite"><b>Get Sci-Fast-IO Pro: Scientific Agent Suite on Agensi.io ($29.00 — Save 42%) →</b></a><br>
+  <a href="https://www.agensi.io/r/CHEATSAZUKI?to=/bundles/sci-fast-io-pro-scientific-agent-suite"><b>Get Sci-Fast-IO Pro: Scientific Agent Suite on Agensi.io ($19.99 — Save 60%) →</b></a><br>
   <sub>Also available free on Agensi: <a href="https://www.agensi.io/r/CHEATSAZUKI?to=/skills/antigravity-fast-io-workflow-checklist">Antigravity Fast-IO Workflow Checklist ($0)</a> · 中文文档与跨平台说明请见 <a href="./README_zh.md">简体中文</a></sub>
 </p>
 
